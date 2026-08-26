@@ -32,14 +32,14 @@ class RedisCacheManager:
             # If server doesn't allow CONFIG SET (e.g. managed cloud Redis), catch and log warning.
             try:
                 self.client.config_set("maxmemory-policy", "volatile-lfu")
-                print("ℹ️ Redis eviction policy set to volatile-lfu successfully.")
+                print("Info: Redis eviction policy set to volatile-lfu successfully.")
             except redis.exceptions.ResponseError as err:
-                print(f"⚠️ Could not set Redis eviction policy to volatile-lfu (not allowed by provider): {err}")
+                print(f"Warning: Could not set Redis eviction policy to volatile-lfu (not allowed by provider): {err}")
             except Exception as e:
-                print(f"⚠️ Failed to dynamically configure Redis maxmemory-policy: {e}")
+                print(f"Warning: Failed to dynamically configure Redis maxmemory-policy: {e}")
                 
         except Exception as e:
-            print(f"❌ Failed to connect to Redis cache manager: {e}. Running in bypass mode.")
+            print(f"Error: Failed to connect to Redis cache manager: {e}. Running in bypass mode.")
             self.enabled = False
             self.client = None
 
@@ -66,7 +66,7 @@ class RedisCacheManager:
                 ]
             return None
         except Exception as e:
-            print(f"⚠️ Redis cache read error for link {link}: {e}")
+            print(f"Warning: Redis cache read error for link {link}: {e}")
             return None
 
     def set_transcript(self, link: str, word_timings: List[WordTiming]) -> bool:
@@ -83,5 +83,5 @@ class RedisCacheManager:
             result = self.client.set(key, serialized, ex=604800)
             return bool(result)
         except Exception as e:
-            print(f"⚠️ Redis cache write error for link {link}: {e}")
+            print(f"Warning: Redis cache write error for link {link}: {e}")
             return False

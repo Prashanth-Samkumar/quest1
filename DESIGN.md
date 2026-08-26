@@ -5,7 +5,7 @@ This document explains the architecture design, data flow, and pipeline stages o
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 The application is structured as a decoupled, multi-tier system designed to handle heavy, asynchronous audio/video downloads and machine learning model inference (Whisper) without blocking user interactions.
 
@@ -66,7 +66,7 @@ graph TD
 
 ---
 
-## 🔄 End-to-End Data Flow
+## End-to-End Data Flow
 
 The diagram below details the chronological sequences of operations from user submission to results rendering:
 
@@ -141,7 +141,7 @@ sequenceDiagram
 
 ---
 
-## ⚙️ Data Pipeline (Step-by-Step)
+## Data Pipeline (Step-by-Step)
 
 The data pipeline resides in [`pipeline.py`](file:///p:/projects/quest1/backend/src/pipeline.py) and operates sequentially on the input media:
 

@@ -20,7 +20,7 @@ The project uses a background worker model to process long-running media jobs wi
 
 ---
 
-## 📂 Project Directory Structure
+## Project Directory Structure
 
 ```text
 quest1/
@@ -184,7 +184,7 @@ Open your browser and navigate to the local address displayed in your terminal (
 
 ---
 
-## 🔍 Troubleshooting & FAQs
+## Troubleshooting & FAQs
 
 * **Error: Connection refused to Redis**
   Ensure that Redis is running. If you are using a cloud-hosted Redis database, double-check the URL, port, username, and password parameters in the `backend/.env` file.

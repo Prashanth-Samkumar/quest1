@@ -24,9 +24,9 @@ class ProcessRequest(BaseModel):
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Log FastAPI startup. Note: WhisperModel is loaded in the Celery worker process now.
-    logger.info("🚀 Starting FastAPI Web Server...")
+    logger.info("Starting FastAPI Web Server...")
     yield
-    logger.info("🛑 Shutting down FastAPI Web Server...")
+    logger.info("Shutting down FastAPI Web Server...")
 
 from fastapi.middleware.cors import CORSMiddleware
 

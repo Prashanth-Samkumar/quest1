@@ -412,22 +412,22 @@ if __name__ == "__main__":
     
     try:
         # # 1. Get duration
-        # print("⏱️ Getting duration...")
+        # print("Getting duration...")
         # duration = get_video_duration(test_url)
         # print(f"Duration: {duration:.2f} seconds ({duration/60:.2f} minutes)")
         
         # # # 2. Download audio (best quality)
-        # # print("\n🎵 Downloading best audio...")
+        # # print("\nDownloading best audio...")
         # # audio_file = download_best_audio(test_url, "audio.wav")
         # # print(f"Audio saved to: {audio_file}")
         
         # # 3. Download video (worst quality for testing)
-        # print("\n📹 Downloading video (worst quality)...")
+        # print("\nDownloading video (worst quality)...")
         # video_file = download_video(test_url, "worst", "video_worst.mp4")
         # print(f"Video saved to: {video_file}")
         
         # # Alternative: Download normal quality
-        # # print("\n📹 Downloading video (normal quality)...")
+        # # print("\nDownloading video (normal quality)...")
         # # video_normal = download_video(test_url, "normal", "video_normal.mp4")
         # # print(f"Video saved to: {video_normal}")
         # print("extracting...")
@@ -442,7 +442,7 @@ if __name__ == "__main__":
             output_path="output/clip.mp4",
             quality="worst"
         )
-        print(f"✅ Clip saved: {clip}")
+        print(f"Clip saved: {clip}")
     except Exception as e:
-        print(f"❌ Error: {e}", file=sys.stderr)
+        print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
