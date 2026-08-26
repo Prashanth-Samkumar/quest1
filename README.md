@@ -184,21 +184,6 @@ Open your browser and navigate to the local address displayed in your terminal (
 
 ---
 
-## 🧪 Running Automated Tests
-
-A comprehensive suite of tests is included in the project to verify API endpoints, the transcriber, cache layer, matcher, and frame extractor.
-
-To execute tests:
-1. Navigate to the `backend/` directory in your terminal.
-2. Activate your virtual environment.
-3. Run the test suite:
-
-```bash
-pytest -v
-```
-
----
-
 ## 🔍 Troubleshooting & FAQs
 
 * **Error: Connection refused to Redis**
