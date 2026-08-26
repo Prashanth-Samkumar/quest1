@@ -1,0 +1,10 @@
+faster-whisper>=1.2.1
+ffmpeg>=1.4
+yt-dlp>=2026.8.19
+rapidfuzz>=3.9.6
+redis>=5.0.1
+python-dotenv>=1.0.1
+pytest>=9.1.1
+fastapi>=0.115.0
+uvicorn>=0.30.0
+celery>=5.4.0
