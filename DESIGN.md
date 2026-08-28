@@ -86,7 +86,7 @@ sequenceDiagram
     BE -->> FE: 201 Created {job_id, status: queued}
     FE ->> FE: Start status polling loop & Stage progress simulation
 
-    rect rgb(240, 245, 255)
+    rect rgb(0, 0, 0)
         note right of CW: Background Worker Processing
         CW ->> R: Read task from queue
         CW ->> R: Query cached transcript for URL
